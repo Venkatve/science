@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Background with Red Center</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Create a pseudo-element to act as the red overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 50;
+    left: 50;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    z-index: -1; /* Ensure the red overlay is below other content */
+    border-radius: 50%; /* Make the red overlay circular */
+    filter: blur(20px); /* Apply blur effect */
+  }
+</style>
+</head>
+<body>
+  <!-- Your content goes here -->
+  <h1>Hello, world!</h1>
+ 
+</html>
